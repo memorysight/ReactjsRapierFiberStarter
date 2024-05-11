@@ -39,7 +39,6 @@ const App = () => {
         <ComplexRigidBody />
 
         {/* //////////////////// */}
-
         <Virus1 />
         <Stats />
       </Suspense>
