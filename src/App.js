@@ -4,11 +4,14 @@ import { Physics, RigidBody, CuboidCollider } from "@react-three/rapier";
 import Scene from "./Scene";
 import ComplexRigidBody from "./ComplexRigidBody";
 import Virus1 from "./Virus1";
-import { OrbitControls, PerspectiveCamera, Environment, Torus} from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Environment, Torus, Stats} from "@react-three/drei";
 
 const App = () => {
+
+  const testing = false;
   return (
     <Canvas>
+      <axesHelper visible={testing} args={[2]} />
       <Suspense>
       <Environment background={"only"} files={process.env.PUBLIC_URL + "/textures/bg.hdr"} />
       <Environment background={false} files={process.env.PUBLIC_URL + "/textures/envmap.hdr"} />
@@ -38,6 +41,7 @@ const App = () => {
         {/* //////////////////// */}
 
         <Virus1 />
+        <Stats />
       </Suspense>
     </Canvas>
   );
