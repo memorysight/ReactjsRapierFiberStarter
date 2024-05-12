@@ -3,6 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { RigidBody, quat } from "@react-three/rapier";
 import { useRef, useState } from "react";
 import { Controls } from "./App";
+import Virus1 from './Virus1';
 
 import * as THREE from 'three';
 
@@ -106,6 +107,8 @@ function Experience(){
                 </Box>
               </group>
             </RigidBody>
+
+            <Virus1 />
       
             <RigidBody type="fixed" name="floor">
               <Box position={[0, 0, 0]} args={[10, 1, 10]}>
